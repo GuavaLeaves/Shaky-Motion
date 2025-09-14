@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Shaky Motion"
-include(":ShakyMotion")
+include(":androidApp")
