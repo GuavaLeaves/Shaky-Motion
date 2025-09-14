@@ -23,15 +23,11 @@ jobs:
       - name: Grant execute permission
         run: chmod +x ./gradlew
 
-      # ✅ Debug step: shows your full folder layout
-      - name: Show project structure
-        run: ls -R
-
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
-      - name: Upload Debug APK
+      - name: Upload all Debug APKs
         uses: actions/upload-artifact@v4
         with:
           name: debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: '**/build/outputs/apk/debug/*.apk'
